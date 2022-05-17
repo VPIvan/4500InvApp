@@ -146,7 +146,7 @@ return [
     */
 
     'sidebar_mini' => 'lg',
-    'sidebar_collapse' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -188,7 +188,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -238,85 +238,22 @@ return [
 
         // Sidebar items:
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
+            'text'    => 'Equipment',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Manufacture',
+                    'url'  => '/manufactures',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Category',
+                    'url'  => '/categories',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Users',
+                    'url'  => '/users',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
         ],
     ],
 
@@ -356,7 +293,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
